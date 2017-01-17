@@ -44,7 +44,7 @@
     "lint:styles": "stylelint src/**/*.scss -q",
     "lint:js": "eslint --quiet src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "echo \"TODO: implement me\""
+    "deploy": "git subtree push --prefix=build --squash origin master"
   },
   "repository": {
     "type": "git",
