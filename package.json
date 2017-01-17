@@ -26,7 +26,7 @@
     "metalsmith-html-minifier": "^2.2.0",
     "metalsmith-imagemin": "^2.0.0",
     "metalsmith-in-place": "^1.4.4",
-    "metalsmith-layouts": "^1.6.5",
+    "metalsmith-layouts": "^1.7.0",
     "metalsmith-lunr": "^0.2.1",
     "metalsmith-mapsite": "^1.0.4",
     "metalsmith-markdown": "^0.2.1",
