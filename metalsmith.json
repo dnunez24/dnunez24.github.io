@@ -20,25 +20,6 @@
       }
     },
     {
-      "metalsmith-permalinks": {
-        "linksets": [
-          {
-            "match": {
-              "collection": "posts"
-            },
-            "pattern": "blog/:title"
-          },
-          {
-            "match": {
-              "collection": "pages"
-            },
-            "pattern": ":title"
-          }
-        ],
-        "relative": false
-      }
-    },
-    {
       "metalsmith-layouts": {
         "engine": "hogan",
         "directory": "layouts",
@@ -52,6 +33,19 @@
           "sortBy": "published",
           "reverse": true
         }
+      }
+    },
+    {
+      "metalsmith-permalinks": {
+        "linksets": [
+          {
+            "match": {
+              "collection": "posts"
+            },
+            "pattern": "blog/:title"
+          }
+        ],
+        "relative": false
       }
     },
     {
@@ -92,6 +86,7 @@
       "metalsmith-browser-sync": {
         "server": "build",
         "files": [
+          "metalsmith.json",
           "src/**/*.md",
           "layouts/**/*.mustache",
           "partials/**/*.mustache",
