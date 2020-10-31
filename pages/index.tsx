@@ -12,7 +12,7 @@ const HomePage: NextPage = () => (
       </Typography>
     </Grid>
     <Grid item>
-      <Typography variant="body1">This is a website</Typography>
+      <Typography variant="body1">This is a website!</Typography>
     </Grid>
   </Grid>
 );
