@@ -19,3 +19,5 @@ const PageLayout: FC<PageLayoutProps> = ({ children, title }) => (
     </Grid>
   </Grid>
 );
+
+export { PageLayout };
