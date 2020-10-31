@@ -16,9 +16,6 @@
   },
   "author": "David Nuñez <david.nunez@alumni.stanford.edu> (https://davidanunez.com)",
   "license": "MIT",
-  "installConfig": {
-    "pnp": true
-  },
   "devDependencies": {
     "@stylelint/postcss-css-in-js": "^0.37.2",
     "@stylelint/postcss-markdown": "^0.36.1",
@@ -66,8 +63,8 @@
     "@material-ui/icons": "^4.9.1",
     "next": "^10.0.0",
     "next-google-fonts": "^1.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "swr": "^0.3.8-beta.2"
   }
 }

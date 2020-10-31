@@ -2,7 +2,11 @@ import type { FC } from "react";
 import Head from "next/head";
 import { Grid } from "@material-ui/core";
 
-const PageLayout: FC = ({ children, title }) => (
+interface PageLayoutProps {
+  title: string;
+}
+
+const PageLayout: FC<PageLayoutProps> = ({ children, title }) => (
   <Grid container>
     <Head>
       <title>{title}</title>
@@ -15,3 +19,5 @@ const PageLayout: FC = ({ children, title }) => (
     </Grid>
   </Grid>
 );
+
+export { PageLayout };
