@@ -1,3 +1,10 @@
-.DS_Store
 *.log
-node_modules/
+.cache
+.DS_Store
+.next
+.pnp
+.pnp.*
+.stylelintcache
+.yarn
+dist
+node_modules
