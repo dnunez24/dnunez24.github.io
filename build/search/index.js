@@ -1,1 +1,0 @@
-{"version":"0.5.12","fields":[{"name":"title","boost":2},{"name":"description","boost":10},{"name":"category","boost":5},{"name":"tags","boost":3},{"name":"contents","boost":1}],"ref":"title","documentStore":{"store":{},"length":0},"tokenStore":{"root":{"docs":{}},"length":0},"corpusTokens":[],"pipeline":[null,null,null]}

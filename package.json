@@ -1,53 +1,73 @@
 {
   "name": "dnunez24.github.io",
   "version": "0.1.0",
-  "description": "My personal website",
-  "author": "David Nuñez <david.nunez@alumni.stanford.edu>",
-  "license": "MIT",
-  "private": true,
+  "description": "Personal website of David Nuñez",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "autoprefixer": "^6.6.1",
-    "babel-runtime": "^6.11.6",
-    "browser-sync": "^2.18.6",
-    "eslint": "^3.13.1",
-    "eslint-config-airbnb": "^14.0.0",
-    "eslint-plugin-import": "^2.2.0",
-    "handlebars": "^4.0.5",
-    "hogan": "^1.0.2",
-    "metalsmith": "^2.2.0",
-    "metalsmith-assets": "^0.1.0",
-    "metalsmith-autoprefixer": "^1.1.1",
-    "metalsmith-browser-sync": "^1.1.1",
-    "metalsmith-collections": "^0.7.0",
-    "metalsmith-discover-helpers": "^0.1.0",
-    "metalsmith-drafts": "0.0.1",
-    "metalsmith-html-minifier": "^2.2.0",
-    "metalsmith-imagemin": "^2.0.0",
-    "metalsmith-in-place": "^1.4.4",
-    "metalsmith-layouts": "^1.7.0",
-    "metalsmith-lunr": "^0.2.1",
-    "metalsmith-mapsite": "^1.0.4",
-    "metalsmith-markdown": "^0.2.1",
-    "metalsmith-metallic": "^2.0.1",
-    "metalsmith-permalinks": "^0.5.0",
-    "metalsmith-sass": "^1.3.0",
-    "metalsmith-uglify": "^1.5.1",
-    "metalsmith-watch": "^1.0.3",
-    "stylelint": "^7.7.1",
-    "stylelint-config-standard": "^15.0.1"
-  },
   "scripts": {
-    "start": "metalsmith",
-    "lint": "npm run lint:styles && npm run lint:js",
-    "lint:styles": "stylelint src/**/*.scss -q",
-    "lint:js": "eslint --quiet src/**/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git subtree push --prefix=build --squash origin master"
+    "build": "yarn next build",
+    "dev": "yarn next",
+    "export": "yarn build && yarn next export -o dist",
+    "start": "yarn next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dnunez24/dnunez24.github.io.git"
+  },
+  "author": "David Nuñez <david.nunez@alumni.stanford.edu> (https://davidanunez.com)",
+  "license": "MIT",
+  "installConfig": {
+    "pnp": true
+  },
+  "devDependencies": {
+    "@stylelint/postcss-css-in-js": "^0.37.2",
+    "@stylelint/postcss-markdown": "^0.36.1",
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.55",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
+    "@yarnpkg/pnpify": "^2.0.0-rc.21",
+    "eslint": "^7.12.1",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "postcss": "^8.1.4",
+    "postcss-flexbugs-fixes": "^5.0.0",
+    "postcss-html": "^0.36.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-syntax": "^0.36.2",
+    "prettier": "^2.1.2",
+    "stylelint": "^13.7.2",
+    "stylelint-config-css-modules": "^2.2.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "typescript": "^4.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "next": "^10.0.0",
+    "next-google-fonts": "^1.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "swr": "^0.3.8-beta.2"
   }
 }
