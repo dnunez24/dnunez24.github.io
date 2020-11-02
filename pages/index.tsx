@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import type { NextPage, GetStaticProps } from "next";
+import type { InferGetStaticPropsType, NextPage, GetStaticProps } from "next";
 import { Grid } from "@material-ui/core";
 import { promises as fs } from "fs";
 import path from "path";
@@ -12,7 +12,10 @@ const components = {
   Image,
 };
 
-const HomePage: NextPage = ({ meta, source }) => {
+const HomePage: NextPage = ({
+  meta,
+  source,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const content = hydrate(source, { components });
 
   return (
@@ -28,7 +31,7 @@ const HomePage: NextPage = ({ meta, source }) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const filename = path.join(process.cwd(), "content", "home.mdx");
   const rawMdx = await fs.readFile(filename, "utf8");
   const { data: meta, content } = matter(rawMdx);

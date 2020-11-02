@@ -4,24 +4,17 @@ import type {
   InferGetStaticPropsType,
   GetStaticPaths,
   GetStaticProps,
+  NextPage,
 } from "next";
 import Head from "next/head";
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import matter from "gray-matter";
 
-interface BlogPostPageProps {
-  source: string;
-  meta: {
-    title: string;
-    description: string;
-  };
-}
-
-const BlogPostPage: InferGetStaticPropsType<typeof getStaticProps> = ({
+const BlogPostPage: NextPage = ({
   source,
   meta,
-}) => {
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const content = hydrate(source);
   return (
     <>
@@ -55,7 +48,7 @@ const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data: meta, content } = matter(rawContent);
   const source = await renderToString(content);
 
-  const props: BlogPostPageProps = {
+  const props = {
     source,
     meta,
   };
