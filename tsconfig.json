@@ -16,10 +16,12 @@
     "baseUrl": ".",
     "paths": {
       "app/*": ["app/*"],
+      "content/*": ["content/*"],
       "common/*": ["common/*"],
       "features/*": ["features/*"],
       "pages/*": ["pages/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./types"]
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]

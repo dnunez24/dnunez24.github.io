@@ -5,7 +5,7 @@ import {
   ThemeProvider,
 } from "@material-ui/core/styles";
 
-const montserratFontFamily = "Montserrat, sans-serif";
+const openSansFontFamily = "OpenSans, sans-serif";
 const oswaldFontFamily = "Oswald, sans-serif";
 
 const baseTheme = createMuiTheme({
@@ -22,12 +22,16 @@ const baseTheme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: montserratFontFamily,
+    fontFamily: openSansFontFamily,
     h1: {
       fontFamily: oswaldFontFamily,
+      textTransform: "uppercase",
+      fontWeight: 700,
+      fontSize: "3rem",
     },
     h2: {
       fontFamily: oswaldFontFamily,
+      fontSize: "2.125rem",
     },
     h3: {
       fontFamily: oswaldFontFamily,
@@ -39,7 +43,7 @@ const baseTheme = createMuiTheme({
       fontFamily: oswaldFontFamily,
     },
     h6: {
-      fontFamily: montserratFontFamily,
+      fontFamily: openSansFontFamily,
     },
   },
 });
