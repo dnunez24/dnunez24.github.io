@@ -9,6 +9,7 @@
   "extends": [
     "airbnb",
     "airbnb/hooks",
+    "plugin:mdx/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/react"
@@ -29,10 +30,12 @@
     ],
     "import/named": "off",
     "import/namespace": "off",
-    "import/no-default-export": "error",
     "import/no-named-as-default-member": "off",
     "import/prefer-default-export": "off",
-    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".mdx", ".tsx"] }
+    ],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-shadow": "error",
@@ -47,5 +50,17 @@
         "alwaysTryTypes": true
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.md"],
+      "rules": {
+        "prettier/prettier": ["error", { "parser": "markdown" }]
+      }
+    },
+    {
+      "files": ["*.mdx"],
+      "extends": ["plugin:mdx/overrides"]
+    }
+  ]
 }
