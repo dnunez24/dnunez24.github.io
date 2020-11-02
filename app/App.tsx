@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import type { FC } from "react";
 import { MDXProvider } from "@mdx-js/react";
-import { Grid, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { AppThemeProvider } from "./AppThemeProvider";
 
 const mdxComponents = {
