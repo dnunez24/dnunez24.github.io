@@ -1,3 +1,11 @@
 [build]
   publish = "dist/"
   command = "yarn export"
+
+[[plugins]]
+package = "netlify-plugin-cache-nextjs"
+
+  [plugins.inputs]
+  build_dir_path = "dist"
+
+
